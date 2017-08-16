@@ -17,22 +17,22 @@ cd modules/contentbox/modules_user/quickCRUD
 Even though we're not using ORM for this, i'm using the orm-entity to create the database structure as well as scaffold out everything else.
 
 ```
-coldbox create orm-entity entityName=Property properties=first,last,email,address1,address2,city,state,zip table=bluweb__properties primaryKey=id generator=native
+coldbox create orm-entity entityName=Contact properties=first,last,email,address1,address2,city,state,zip,updated_at:timestamp,created_at:timestamp table=quickcrud primaryKey=id generator=native
 ```
 
 
-The above will create a model `models/Property.cfc` that can be deleted after everything has been initialized.
+The above will create a model `models/Contact.cfc` that can be deleted after everything has been initialized.
 
 
 This will read that object and scaffold out the DAO models as well as the views:
 ```
-contentbox create crud-cbadmin entity=models.Property pluralName=Properties moduleName=quickCRUD table=bluweb__properties
+contentbox create crud-cbadmin entity=models.Contact pluralName=Contacts moduleName=quickCRUD table=quickcrud
 ```
 
 
 
 
-this can be accessed via: http://yoursite/cbadmin/module/quickCRUD/Properties/index
+this can be accessed via: http://yoursite/cbadmin/module/quickCRUD/Contact/index
 
 ```
 
