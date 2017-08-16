@@ -27,7 +27,7 @@ component {
     function checkEventPermissions( event, rc, prc ){
         var currentAction = event.getMemento().context.moduleAction;
         if( structKeyExists( eventPermissions, currentAction ) ){
-            if( !prc.oAuthor.checkPermission( eventPermissions[ currentAction ][ "permissions" ] ) ){
+            if( !prc.oCurrentAuthor.checkPermission( eventPermissions[ currentAction ][ "permissions" ] ) ){
                 if( structKeyExists( eventPermissions[ currentAction ], "permissions" ) ){
                     messagebox.error( eventPermissions[ currentAction ][ "message" ] );   
                 }

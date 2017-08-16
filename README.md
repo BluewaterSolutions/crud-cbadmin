@@ -7,7 +7,7 @@ Please note that this is a work in progress and is currently just a tool to get 
 
 
 
-// Create a new module:
+Create a new module:
 ```
 contentbox create module directory=modules/contentbox/modules_user name=quickCRUD
 cd modules/contentbox/modules_user/quickCRUD
@@ -26,13 +26,13 @@ The above will create a model `models/Property.cfc` that can be deleted after ev
 
 This will read that object and scaffold out the DAO models as well as the views:
 ```
-contentbox create crud-cbadmin entity=models.Property pluralName=Properties moduleName=bluTest table=bluweb__properties
+contentbox create crud-cbadmin entity=models.Property pluralName=Properties moduleName=quickCRUD table=bluweb__properties
 ```
 
 
 
 
-this can be accessed via: http://yoursite/cbadmin/module/bluTest/Properties/index
+this can be accessed via: http://yoursite/cbadmin/module/quickCRUD/Properties/index
 
 ```
 
