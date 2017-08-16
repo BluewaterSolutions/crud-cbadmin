@@ -1,8 +1,8 @@
 {
     "name":"crud-cbadmin",
-    "version":"0.0.0",
+    "version":"1.0.0",
     "author":"",
-    "location":"BluewaterSolutions/crud-cbadmin#v0.0.0",
+    "location":"BluewaterSolutions/crud-cbadmin#v1.0.0",
     "homepage":"https://github.com/BluewaterSolutions/crud-cbadmin",
     "documentation":"https://github.com/BluewaterSolutions/crud-cbadmin",
     "repository":{
@@ -11,11 +11,11 @@
     },
     "bugs":"https://github.com/BluewaterSolutions/crud-cbadmin/issues",
     "slug":"crud-cbadmin",
-    "shortDescription":"Short Module Description",
+    "shortDescription":"A CommandBox tool for scaffolding crud",
     "description":"Short Module Description",
-    "type":"modules",
+    "type":"commandbox-modules",
     "dependencies":{
-        
+        "cbxmigrations":"^1.0.5"
     },
     "devDependencies":{
         "coldbox":"^4.3.0+188",
@@ -23,7 +23,8 @@
     },
     "installPaths":{
         "testbox":"testbox",
-        "coldbox":"tests/resources/app/coldbox"
+        "coldbox":"tests/resources/app/coldbox",
+        "cbxmigrations":"modules/contentbox/modules_user/cbxmigrations"
     },
     "scripts":{
         "postVersion":"package set location='BluewaterSolutions/crud-cbadmin#v`package version`'",
